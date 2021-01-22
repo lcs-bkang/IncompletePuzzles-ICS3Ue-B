@@ -23,12 +23,34 @@ let phrase = readLine()!
 func translate(phrase shortForm: String) -> String {
 
     // NOTE: Instead of an "if statement" consider using a different type of Swift structure to handle all the different possible cases...
-    if phrase == "TA" {
+    switch shortForm {
+    case "TA":
         return "totally awesome"
-    } else if phrase == "TTYL" {
+    case "TTYL":
         return "talk to you later"
+    case "CU":
+        return "see you"
+    case ":-)":
+        return "I'm happy"
+    case ":-(":
+        return "I'm unhappy"
+    case ";-)":
+        return "wink"
+    case ":-P":
+        return "stick out my tongue"
+    case "(˜.˜)":
+        return "sleepy"
+    case "CCC":
+        return "Canadian Cheese Champion"
+    case "CUZ":
+        return "because"
+    case "TY":
+        return "thank-you"
+    case "YW":
+        return "you're welcome"
+    default:
+        return shortForm
     }
-
 }
 
 // OUTPUT

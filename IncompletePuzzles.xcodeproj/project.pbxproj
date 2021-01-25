@@ -50,6 +50,9 @@
 		0EE0D96C252564CB0090B2E0 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE0D96B252564CB0090B2E0 /* main.swift */; };
 		8140D46025BB3241006B6DBB /* TheCellSellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8140D45F25BB3241006B6DBB /* TheCellSellTests.swift */; };
 		8140D49725BB3324006B6DBB /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE0D96B252564CB0090B2E0 /* main.swift */; };
+		A62E1F3E25BF27CC00E6EBDE /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E736521252B632200F3914E /* main.swift */; };
+		A62E1F4925BF27D100E6EBDE /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE0D95E252563ED0090B2E0 /* main.swift */; };
+		A62E1F5425BF27D500E6EBDE /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7364C02528B54400F3914E /* main.swift */; };
 		A6C799A025BB42080072A7A2 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E736530252B64C800F3914E /* main.swift */; };
 /* End PBXBuildFile section */
 
@@ -729,6 +732,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0E08FBCA254B15500014C595 /* TridentTests.swift in Sources */,
+				A62E1F4925BF27D100E6EBDE /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -737,6 +741,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0E08FCB9254B23EE0014C595 /* RSANumbersTests.swift in Sources */,
+				A62E1F5425BF27D500E6EBDE /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -745,6 +750,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0E08FD4F254B280E0014C595 /* ShiftySumsTests.swift in Sources */,
+				A62E1F3E25BF27CC00E6EBDE /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

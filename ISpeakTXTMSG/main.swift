@@ -20,6 +20,11 @@ print("Enter phrase> ", terminator: "")
 let phrase = readLine()!
 
 // PROCESS
+// Parameters are inputs to the function.
+// Parameters are separated by commas.
+// A parameter can have an internal and external name.
+// In this case, the translate function has one parameter.
+// External name of phrase and internal name of shortForm.
 func translate(phrase shortForm: String) -> String {
 
     // NOTE: Instead of an "if statement" consider using a different type of Swift structure to handle all the different possible cases...
@@ -54,5 +59,11 @@ func translate(phrase shortForm: String) -> String {
 }
 
 // OUTPUT
+// The "Call site"
+// Where the function is called or invoked.
+// External parameter name shows the call site.
+// In this colour scheme, the external name is in white.
+// What we pass in for a parameter is referred to as the "argument"
+// Parameter = question.  Argument = answer.
 let output = translate(phrase: phrase)
 print(output)

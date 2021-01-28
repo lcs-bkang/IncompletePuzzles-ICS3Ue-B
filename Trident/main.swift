@@ -16,13 +16,13 @@ print("=======")
 // INPUT
     
 // Get tine length
-    print("Enter tine length:", terminator: "")
+    print("Enter tine length:")
 // User's input for tine length.
 let t = Int(readLine()!)!
 
 
 // Get tine spacing
-    print("Enter tine spacing:", terminator: "")
+    print("Enter tine spacing:")
 // The user's input for tine spacing
 let s = Int(readLine()!)!
 
@@ -38,8 +38,15 @@ let s = Int(readLine()!)!
 
 // Draw the first line of all three tines with spaces in between.
 // Pattern is *, space, space.  *, space, space...
-for _ in 1...3 {
-    print("*", terminator: "")
+
+    for _ in 1...3 {
+        // Print the stars in a horizontal row
+        print("*", terminator: "")
+    
+        // Print the spaces
+        for _ in 1...s {
+        print("s", terminator: "")
+        }
 }
 //// Produce top of trident according to length given
 //for _ in 1...tineLength {

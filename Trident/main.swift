@@ -36,6 +36,10 @@ let h = Int(readLine()!)!
     
 //}
 // OUTPUT
+// Making lines separate the input lines and the trident.
+for _ in 1...2 {
+    print("")
+}
 // Draw the first line of all three tines with spaces in between.
 // Pattern is *, space, space.  *, space, space...
 // Draws all tines for the tine length.
@@ -48,7 +52,7 @@ for _ in 1...t {
     
         // Print the spaces inbetween stars
         for _ in 1...s {
-        print("s", terminator: "")
+        print(" ", terminator: "")
         }
     }
     
@@ -74,7 +78,7 @@ var handleSpace = s + 1
 // Print the trident handle
 for _ in 1...h {
     for _ in 1...handleSpace {
-        print("s", terminator: "")
+        print(" ", terminator: "")
     }
     print("*")
 }

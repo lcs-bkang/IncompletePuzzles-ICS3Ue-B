@@ -58,14 +58,17 @@ for _ in 1...t {
     // Or you can change it to be written as this
     print("\n", terminator: "")
 }
-// Draw the tine spacing.
-for _ in 1...3 {
+// Draw the line connecting the tines.
+for _ in 1...2 {
     print("*", terminator: "")
-    // Drawing the 
+    
     for _ in 1...s {
-        print("*")
+        print("*", terminator: "")
     }
 }
+// Printing the last star in the connector line and go down to the next line.
+print("*")
+
 // Create a variable that holds the value of the spaces before the handle.
 var handleSpace = s + 1
 // Print the trident handle
@@ -75,22 +78,3 @@ for _ in 1...h {
     }
     print("*")
 }
-//// Produce top of trident according to length given
-//for _ in 1...tineLength {
-//    // Print the tines
-//    for _ in 1...3 {
-//
-//        // Print part of a tine
-//        print("*", terminator: "")
-//
-//        // Print space between tines
-//        for _ in 1...spacing {
-//            print(" ", terminator: "")
-//        }
-//
-//    }
-//    // Go to next line of output
-//    print("")
-//}
-
-

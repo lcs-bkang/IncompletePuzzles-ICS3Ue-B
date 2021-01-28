@@ -17,21 +17,24 @@ print("=======")
     
 // Get tine length
     print("Enter tine length:", terminator: "")
-let tineLength = Int(readLine()!)!
+// User's input for tine length.
+let t = Int(readLine()!)!
 
 
 // Get tine spacing
     print("Enter tine spacing:", terminator: "")
-
-let tineSpacing = Int(readLine()!)!
+// The user's input for tine spacing
+let s = Int(readLine()!)!
 
 
 // PROCESS
-func drawTrident(tineLength: Int, tineSpacing: Int, handleLength: Int) {
+//func drawTrident(tineLength: Int, tineSpacing: Int, handleLength: Int) {
     
-}
+//}
 // OUTPUT
-
+for _ in 1...t {
+    print("*")
+}
 //// Produce top of trident according to length given
 //for _ in 1...tineLength {
 //    // Print the tines

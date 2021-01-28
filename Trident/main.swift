@@ -26,6 +26,10 @@ let t = Int(readLine()!)!
 // The user's input for tine spacing
 let s = Int(readLine()!)!
 
+// Get handle length.
+    print("Enter handle length:")
+// User's input for handle length
+let h = Int(readLine()!)!
 
 // PROCESS
 //func drawTrident(tineLength: Int, tineSpacing: Int, handleLength: Int) {
@@ -49,7 +53,27 @@ for _ in 1...t {
     }
     
     // Row is completed, go to next line.
-    print("")
+    // The \n character sequece pushes content down to the next line
+    // You can use print("") to push to the next line, using the built in terminator.
+    // Or you can change it to be written as this
+    print("\n", terminator: "")
+}
+// Draw the tine spacing.
+for _ in 1...3 {
+    print("*", terminator: "")
+    // Drawing the 
+    for _ in 1...s {
+        print("*")
+    }
+}
+// Create a variable that holds the value of the spaces before the handle.
+var handleSpace = s + 1
+// Print the trident handle
+for _ in 1...h {
+    for _ in 1...handleSpace {
+        print("s", terminator: "")
+    }
+    print("*")
 }
 //// Produce top of trident according to length given
 //for _ in 1...tineLength {

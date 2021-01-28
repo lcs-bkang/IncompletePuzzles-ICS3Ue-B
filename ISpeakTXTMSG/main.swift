@@ -13,12 +13,6 @@ import Foundation
 print("I Speak TXTMSG")
 print("==============")
 
-// INPUT
-
-// Ask for a phrase
-print("Enter phrase> ", terminator: "")
-let phrase = readLine()!
-
 // PROCESS
 // Parameters are inputs to the function.
 // Parameters are separated by commas.
@@ -67,3 +61,14 @@ func translate(phrase shortForm: String) -> String {
 // Parameter = question.  Argument = answer.
 let output = translate(phrase: phrase)
 print(output)
+
+// INPUT and OUTPUT
+var translation = ""
+repeat {
+
+
+    print("Enter phrase> ", terminator: "")
+    let phrase = readLine()!
+    translation = translate(phrase: phrase)
+    print(translation)
+} while translation != "talk to you later"

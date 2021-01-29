@@ -37,8 +37,10 @@ for _ in 1...2 {
 }
 
 // PROCESS
-func drawTrident(tineLength: Int, tineSpacing: Int, handleLength: Int) {
+func drawTrident(tineLength t: Int, tineSpacing s: Int, handleLength h: Int) -> String {
     
+    // Create a variable to store output.
+    var output = ""
     // Draw the first line of all three tines with spaces in between.
     // Pattern is *, space, space.  *, space, space...
     // Draws all tines for the tine length.
@@ -47,11 +49,11 @@ func drawTrident(tineLength: Int, tineSpacing: Int, handleLength: Int) {
         // Draw all three tines with spaces inbetween
         for _ in 1...3 {
             // Print the stars in a horizontal row
-            print("*", terminator: "")
+                output += "*"
             
             // Print the spaces inbetween stars
             for _ in 1...s {
-                print(" ", terminator: "")
+                output += " "
             }
         }
         
@@ -63,27 +65,32 @@ func drawTrident(tineLength: Int, tineSpacing: Int, handleLength: Int) {
     }
     // Draw the line connecting the tines.
     for _ in 1...2 {
-        print("*", terminator: "")
+        output += "*"
         
         for _ in 1...s {
-            print("*", terminator: "")
+            output += "*"
         }
     }
     // Printing the last star in the connector line and go down to the next line.
-    print("*")
+    output += "*"
+    output += "\n"
     
     // Create a variable that holds the value of the spaces before the handle.
     let handleSpace = s + 1
     // Print the trident handle
     for _ in 1...h {
         for _ in 1...handleSpace {
-            print(" ", terminator: "")
+            output += " "
         }
-        print("*")
+        output += "*"
     }
+    // Return the output
+    return output
 }
 
 // OUTPUT
 // Creating the value that runs the function.  Call site.
-let output: () = drawTrident(tineLength: t, tineSpacing: s, handleLength: h)
-print(output)
+let pOutput = drawTrident(tineLength: t, tineSpacing: s, handleLength: h)
+
+// Print thr output
+print(pOutput)

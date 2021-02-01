@@ -28,9 +28,40 @@ print("=============")
 // INPUT
 
 // Get daytime minutes
-print("Number of daytime minutes?")
-let day = Int(readLine()!)!
-
+var day = 0
+while true {
+    
+    // Prompt the user
+    print("Number of daytime minutes? ")
+    
+    // Collect input
+    // Guard let is designed to exit the loop or function if the condition fails.
+    // Protects against false inputs.
+    // This guard statement checks if the constant givenInput is equal to the user input.
+    guard let givenInput = readLine() else {
+        continue
+    }
+    
+    // Convert to an integer
+    // This guard statement checks if the input was an integer by trying to convert it into one.
+    guard let givenInteger = Int(givenInput) else {
+        continue
+    }
+    
+    // Check that the value is positive
+    // This guard statement checks if the given integer is greater than 0.
+    guard givenInteger > 0 else {
+        continue
+    }
+    
+    // Assign the given integer to our "day" variable
+    // This is required because the constant created in the loop is destroyed after the loop is ended.
+    day = givenInteger
+    
+    // Stop the loop
+    break
+    
+}
 // Get evening minutes
 print("Number of evening minutes?")
 let evening = Int(readLine()!)!

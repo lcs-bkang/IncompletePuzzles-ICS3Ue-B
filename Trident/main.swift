@@ -16,20 +16,14 @@ print("=======")
 // INPUT
 
 // Get tine length
-print("Enter tine length:")
-// User's input for tine length.
-let t = Int(readLine()!)!
+let t = Int.collectInputInt(withPrompt: "Enter tine length: ", minimum: 0, maximum: nil)
 
 
 // Get tine spacing
-print("Enter tine spacing:")
-// The user's input for tine spacing
-let s = Int(readLine()!)!
+let s = Int.collectInputInt(withPrompt: "Enter tine spacing: ", minimum: 0, maximum: nil)
 
 // Get handle length.
-print("Enter handle length:")
-// User's input for handle length
-let h = Int(readLine()!)!
+let h = Int.collectInputInt(withPrompt: "Enter handle length: ", minimum: 0, maximum: nil)
 
 // Making lines separate the input lines and the trident.
 for _ in 1...2 {

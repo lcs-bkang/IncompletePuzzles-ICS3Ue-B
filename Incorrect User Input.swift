@@ -26,7 +26,7 @@ print("The Cell Sell")
 print("=============")
 
 // INPUT
-
+// Using guard let.
 // Get daytime minutes
 var day = 0
 while true {

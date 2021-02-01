@@ -16,12 +16,10 @@ print("===========")
 // INPUT
 
 // Get the number to be shifted
-print("Number to be shifted?")
-let n = Int(readLine()!)!
+let n = Int.collectInputInt(withPrompt: "Number to be shifted? ", minimum: 0, maximum: nil)
 
 // How many times should we shift?
-print("How many times is it being shifted?")
-let k = Int(readLine()!)!
+let k = Int.collectInputInt(withPrompt: "How many times is it being shifted? ", minimum: 0, maximum: nil)
 
 // PROCESS
 func shift(n: Int, k: Int) -> Int {

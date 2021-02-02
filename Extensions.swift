@@ -9,6 +9,7 @@ import Foundation
 
 // Extensions add new functionality to an existing class, structure, enumeration, or protocol type.
 // Static functions are invoked by the class, not the instance.
+// Instance is when you call a value in the code.  For example, var h = 7 or 7.function
 extension Int {
     // Three parameters -
     // Prompt - The text that will be shown to the user.
@@ -20,7 +21,7 @@ extension Int {
         while true {
             
             // Prompt the user
-            print(prompt)
+            print(prompt, terminator: "")
             
             // Collect the input
             guard let givenInput = readLine() else {
@@ -70,7 +71,7 @@ extension Double {
         while true {
             
             // Prompt the user
-            print(prompt)
+            print(prompt, terminator: "")
             
             // Collect the input
             guard let givenInput = readLine() else {

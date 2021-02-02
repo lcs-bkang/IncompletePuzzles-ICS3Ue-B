@@ -31,7 +31,6 @@ var evening = Int.collectInputInt(withPrompt: "Number of evening minutes? ",
                                maximum: nil)
 
 // Get weekend minutes
-print("Number of weekend minutes?")
 let weekend = Int.collectInputInt(withPrompt: "Number of weekend minutes? ", minimum: 0, maximum: nil)
 
 // INPUT

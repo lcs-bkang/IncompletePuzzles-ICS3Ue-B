@@ -10,11 +10,17 @@ import SwiftUI
 struct ContentView: View {
     
     // MARK: Stored Properties
-    @State private var numberToBeShifted: String
-    @State private var numberOfShifts: String
-    @State private var shiftedNumber: String
-
+    @State var numberToBeShifted: String = "0"
+    @State var numberOfShifts: String = "0"
+    
     // MARK: Computed Properties
+    
+    var numberToBeShiftedText: Int {
+       return Int(numberToBeShifted)!
+    }
+    private var shiftedNumber: String {
+        return shift(n: numberToBeShifted, k: numberOfShifts)
+    }
     
     var body: some View {
         
@@ -36,12 +42,11 @@ struct ContentView: View {
             }
         }
     }
-    var shiftedNumber = shift(n: numberToBeShifted, k: numberOfShifts)
 
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView(numberToBeShifted: 5, numberOfShifts: 3, shiftedNumber: 631)
+        ContentView(numberToBeShifted: 5, numberOfShifts: 3)
     }
 }

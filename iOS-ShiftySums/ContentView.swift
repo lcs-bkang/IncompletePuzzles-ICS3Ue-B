@@ -10,8 +10,9 @@ import SwiftUI
 struct ContentView: View {
     
     // MARK: Stored Properties
-    @State var numberToBeShifted: String
-    @State var numberOfShifts: String
+    @State private var numberToBeShifted: String
+    @State private var numberOfShifts: String
+    @State private var shiftedNumber: String
 
     // MARK: Computed Properties
     
@@ -29,13 +30,13 @@ struct ContentView: View {
                         .keyboardType(.numberPad)
                 }
                 Section(header: Text("Result")) {
-                    Text(shift(n: numberToBeShifted, k: numberOfShifts))
+                    Text(shiftedNumber)
                 }
                 
             }
         }
     }
-    
+    var shiftedNumber = shift(n: numberToBeShifted, k: numberOfShifts)
 
 }
 

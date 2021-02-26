@@ -10,16 +10,33 @@ import SwiftUI
 struct ContentView: View {
     
     // MARK: Stored Properties
-    @State var numberToBeShifted: String = "0"
-    @State var numberOfShifts: String = "0"
+    @State var numberToBeShifted: String = ""
+    @State var numberOfShifts: String = ""
     
     // MARK: Computed Properties
+
     
-    var numberToBeShiftedText: Int {
-       return Int(numberToBeShifted)!
+    private var numberToBeShiftedInt: Int {
+        
+        guard let numberToBeShiftedInt = Int(numberToBeShifted) else {
+            return 0
+        }
+        
+        return numberToBeShiftedInt
     }
-    private var shiftedNumber: String {
-        return shift(n: numberToBeShifted, k: numberOfShifts)
+    
+    private var numberOfShiftsInt: Int {
+        
+        guard let numberOfShiftsInt = Int(numberOfShifts) else {
+            return 0
+        }
+        
+        return numberOfShiftsInt
+    }
+    
+    var shiftedNumber: String {
+
+        return String(shift(n: numberToBeShiftedInt, k: numberOfShiftsInt))
     }
     
     var body: some View {
@@ -47,6 +64,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView(numberToBeShifted: 5, numberOfShifts: 3)
+        ContentView(numberToBeShifted: "5", numberOfShifts: "3")
     }
 }
